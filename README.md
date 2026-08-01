@@ -28,10 +28,10 @@ The objective of this project is to analyze pizza sales data and answer key busi
 
 ## 🛠️ Tools Used
 
-- Power BI
-- MySQL
 - SQL
+- MySQL
 - DAX
+- Power BI
 
 ---
 
