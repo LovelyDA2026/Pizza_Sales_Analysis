@@ -6,7 +6,8 @@ An interactive Power BI dashboard built to analyze pizza sales performance using
 
 ## 📊 Dashboard Preview
 
-<img src="dashboard.png" width="800"/>
+![Dashboard]
+(Pizza_Sales_Dashboard.png)
 
 ---
 
