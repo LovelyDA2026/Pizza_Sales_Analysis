@@ -3,11 +3,13 @@
 An end-to-end Pizza Sales Analysis project based on pizza order data to analyze sales performance and identify useful business insights across products, categories, sizes, and ordering trends.
 
 The project includes relational database creation, SQL analysis, DAX measures, and an interactive Power BI dashboard.
+
+
 ---
 
 🎯 Project Objective
 
-My objective was to analyze pizza sales data using SQL and Power BI and find useful insights about sales, products, categories, and ordering trends.
+The objective of this project was to analyze pizza sales data using SQL and Power BI and find useful insights about sales, products, categories, and ordering trends.
 
 ---
 
@@ -169,7 +171,7 @@ The analysis helped identify:
 
 📷 Dashboard Preview
 
-"Pizza Sales Performance Dashboard" (Dashboard.png)
+![Dashboard](Dashboard.png)
 
 ---
 
