@@ -177,15 +177,15 @@ The analysis helped identify:
 
 📁 **Project Files**
 
-File                             |                Description
-"orders.csv"                     |                Orders dataset
-"order_details.csv"              |                Order details dataset
-"pizzas.csv"                     |                Pizza information dataset
-"pizza_types.csv"                |                Pizza type and category information
-"Pizza_Sales_Analysis.sql"       |                Database creation, validation, and SQL analysis
-"Pizza_Sales_Analysis.pbix"      |                Power BI dashboard
-"Dashboard.png"                  |                Dashboard preview
-
+| File | Description |
+|---|---|
+| orders.csv | Orders dataset |
+| order_details.csv | Order details dataset |
+| pizzas.csv | Pizza information dataset |
+| pizza_types.csv | Pizza type and category information |
+| Pizza_Sales_Analysis.sql | Database creation, validation, and SQL analysis |
+| Pizza_Sales_Analysis.pbix | Power BI dashboard |
+| Dashboard.png | Dashboard preview |
 ---
 
 🔄 **Project Workflow**
