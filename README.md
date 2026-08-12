@@ -1,50 +1,137 @@
-# 🍕 Pizza Sales Analysis Dashboard
+🍕 Pizza Sales Analysis Dashboard
 
-An interactive Power BI dashboard built to analyze pizza sales performance using SQL and DAX. This project provides business insights into revenue, orders, customer purchasing patterns, and product performance.
+An end-to-end Pizza Sales Analysis project using MySQL, SQL, Power BI, and DAX to analyze sales performance and identify useful business insights from pizza order data.
 
----
-
-## 📊 Dashboard Preview
-
-![Dashboard](Dashboard.png)
+The project covers relational database creation, SQL analysis, DAX measures, and an interactive Power BI dashboard.
 
 ---
 
-## 🎯 Project Objective
+🎯 Project Objective
 
-The objective of this project is to analyze pizza sales data and answer key business questions such as:
+My objective was to analyze pizza sales data using SQL and Power BI and find useful insights about sales, products, categories, and ordering trends.
 
-- Total Revenue
-- Total Orders
-- Total Pizzas Sold
+---
+
+🛠️ Tools & Technologies
+
+- MySQL – Database creation and data storage
+- SQL – Data validation and business analysis
+- Power BI – Interactive dashboard and data visualization
+- DAX – KPI and dashboard measures
+
+---
+
+🗄️ Database Design
+
+I created a relational database named "pizza_sales_db" with four related tables:
+
+1. Orders
+
+Contains:
+
+- Order ID
+- Order Date
+- Order Time
+
+2. Order Details
+
+Contains:
+
+- Order Details ID
+- Order ID
+- Pizza ID
+- Quantity
+
+3. Pizzas
+
+Contains:
+
+- Pizza ID
+- Pizza Type ID
+- Size
+- Price
+
+4. Pizza Types
+
+Contains:
+
+- Pizza Type ID
+- Pizza Name
+- Category
+- Ingredients
+
+The tables are connected using primary keys and foreign keys.
+
+---
+
+🔍 SQL Analysis
+
+I performed data validation and analyzed the sales data using 20 SQL business questions.
+
+Data Validation
+
+I checked:
+
+- Total row counts
+- Duplicate primary keys
+- NULL values
+- Date ranges
+- Quantity ranges
+- Price ranges
+
+SQL Techniques Used
+
+- "COUNT()"
+- "SUM()"
+- "AVG()"
+- "MIN()"
+- "MAX()"
+- "COUNT(DISTINCT)"
+- "GROUP BY"
+- "HAVING"
+- "ORDER BY"
+- "JOIN"
+- Subquery
+- CTE
+- Window Functions
+- "ROW_NUMBER()"
+- "LAG()"
+- SQL View
+
+Business Analysis Examples
+
+- Total number of orders
+- Total pizzas sold
+- Number of pizza types
+- Most expensive and cheapest pizza
+- Number of pizza sizes and categories
+- Orders by day
+- Orders by hour
+- Total revenue
 - Average Order Value
-- Best & Worst Performing Pizzas
-- Revenue by Category
-- Revenue by Pizza Size
-- Daily Sales Trend
-- Hourly Order Trend
+- Top-selling pizzas by quantity
+- Top 5 pizzas by revenue
+- Revenue by pizza category
+- Revenue by pizza size
+- Pizzas priced above average
+- Top-selling pizza in each category
+- Daily revenue compared with the previous day
+- Creation of a sales analysis view
 
 ---
 
-## 🛠️ Tools Used
+📊 Power BI Dashboard
 
-- SQL
-- MySQL
-- DAX
-- Power BI
+I created an interactive Pizza Sales Performance Dashboard in Power BI.
 
----
-
-## 📈 KPIs
+KPI Cards
 
 - 💰 Total Revenue
 - 🛒 Total Orders
 - 🍕 Total Pizzas Sold
 - 📊 Average Order Value
 
----
-
-## 📉 Visualizations
+Dashboard Visuals
 
 - Revenue by Pizza Category
 - Top 5 Pizzas by Revenue
@@ -56,25 +143,84 @@ The objective of this project is to analyze pizza sales data and answer key busi
 
 ---
 
-## 💡 Key Insights
+🧮 DAX
+
+I created DAX measures for the main dashboard KPIs, including:
+
+- Total Revenue
+- Total Orders
+- Total Pizzas Sold
+- Average Order Value
+
+These measures are used in the Power BI dashboard to display the key sales metrics dynamically based on the selected filters.
+
+---
+
+💡 Key Insights
+
+The analysis helped identify:
 
 - Classic category generated the highest revenue.
-- Large size pizzas contributed the highest sales.
-- Peak order hours were during lunch and evening.
-- A few pizza varieties consistently outperformed others.
+- Large pizza size contributed the highest revenue.
+- Ordering activity was higher during specific peak hours.
+- The analysis identified the top 5 and bottom 5 pizzas by revenue.
+- Daily order trends helped identify changes in ordering activity over time.
 
 ---
 
-## 📁 Dataset
+📷 Dashboard Preview
 
-Pizza Sales Dataset
+"Pizza Sales Performance Dashboard" (Dashboard.png)
 
 ---
 
-## 👩‍💻 Author
+📁 Project Files
 
-*Lovely Goyal*
+File| Description
+"orders.csv"| Orders dataset
+"order_details.csv"| Order details dataset
+"pizzas.csv"| Pizza information dataset
+"pizza_types.csv"| Pizza type and category information
+"Pizza_Sales_Analysis.sql"| Database creation, validation, and SQL analysis
+"Pizza_Sales_Analysis.pbix"| Power BI dashboard
+"Dashboard.png"| Dashboard preview
+
+---
+
+🔄 Project Workflow
+
+Pizza Sales Data
+
+↓
+
+MySQL Relational Database
+
+↓
+
+Data Validation
+
+↓
+
+SQL Business Analysis
+
+↓
+
+DAX Measures
+
+↓
+
+Power BI Dashboard
+
+↓
+
+Business Insights
+
+---
+
+👩‍💻 Author
+
+Lovely Goyal
 
 Aspiring Data Analyst
 
-GitHub: https://github.com/LovelyDA2026
+Skills: SQL • MySQL • Power BI • DAX • Data Analysis • Data Visualization • Business Intelligence
