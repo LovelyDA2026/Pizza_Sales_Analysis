@@ -1,19 +1,24 @@
-🍕 Pizza Sales Analysis Dashboard
+🍕 **Pizza Sales Analysis Dashboard**
 
 An end-to-end Pizza Sales Analysis project based on pizza order data to analyze sales performance and identify useful business insights across products, categories, sizes, and ordering trends.
 
 The project includes relational database creation, SQL analysis, DAX measures, and an interactive Power BI dashboard.
 
+---
+
+📷 **Dashboard Preview**
+
+![Dashboard](Dashboard.png)
 
 ---
 
-🎯 Project Objective
+🎯 **Project Objective**
 
 The objective of this project was to analyze pizza sales data using SQL and Power BI and find useful insights about sales, products, categories, and ordering trends.
 
 ---
 
-🛠️ Tools & Technologies
+🛠️ **Tools & Technologies**
 
 - MySQL – Database creation and data storage
 - SQL – Data validation and business analysis
@@ -22,7 +27,7 @@ The objective of this project was to analyze pizza sales data using SQL and Powe
 
 ---
 
-🗄️ Database Design
+🗄️ **Database Design**
 
 I created a relational database named "pizza_sales_db" with four related tables:
 
@@ -65,7 +70,7 @@ The tables are connected using primary keys and foreign keys.
 
 ---
 
-🔍 SQL Analysis
+🔍 **SQL Analysis**
 
 I performed data validation and analyzed the sales data using 20 SQL business questions.
 
@@ -121,7 +126,7 @@ Business Analysis Examples
 
 ---
 
-📊 Power BI Dashboard
+📊 **Power BI Dashboard**
 
 I created an interactive Pizza Sales Performance Dashboard in Power BI.
 
@@ -144,7 +149,7 @@ Dashboard Visuals
 
 ---
 
-🧮 DAX
+🧮 **DAX**
 
 I created DAX measures for the main dashboard KPIs, including:
 
@@ -157,7 +162,7 @@ These measures are used in the Power BI dashboard to display the key sales metri
 
 ---
 
-💡 Key Insights
+💡 **Key Insights**
 
 The analysis helped identify:
 
@@ -169,26 +174,21 @@ The analysis helped identify:
 
 ---
 
-📷 Dashboard Preview
 
-![Dashboard](Dashboard.png)
+📁 **Project Files**
 
----
-
-📁 Project Files
-
-File| Description
-"orders.csv"| Orders dataset
-"order_details.csv"| Order details dataset
-"pizzas.csv"| Pizza information dataset
-"pizza_types.csv"| Pizza type and category information
-"Pizza_Sales_Analysis.sql"| Database creation, validation, and SQL analysis
-"Pizza_Sales_Analysis.pbix"| Power BI dashboard
-"Dashboard.png"| Dashboard preview
+File                             |                Description
+"orders.csv"                     |                Orders dataset
+"order_details.csv"              |                Order details dataset
+"pizzas.csv"                     |                Pizza information dataset
+"pizza_types.csv"                |                Pizza type and category information
+"Pizza_Sales_Analysis.sql"       |                Database creation, validation, and SQL analysis
+"Pizza_Sales_Analysis.pbix"      |                Power BI dashboard
+"Dashboard.png"                  |                Dashboard preview
 
 ---
 
-🔄 Project Workflow
+🔄 **Project Workflow**
 
 Pizza Sales Data
 
@@ -218,7 +218,7 @@ Business Insights
 
 ---
 
-👩‍💻 Author
+👩‍💻 **Author**
 
 Lovely Goyal
 
