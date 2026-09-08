@@ -202,7 +202,7 @@ FROM order_details od
 JOIN pizzas p
 ON od.pizza_id=p.pizza_id;
 
--- Q13. Top 10 Best-Selling Pizzas (by Quantity)
+-- Q13. Top 10 Best-Selling Pizzas by Quantity
 SELECT pt.name,
        SUM(od.quantity) AS total_quantity
 FROM order_details od
@@ -260,69 +260,39 @@ WHERE price >
 )
 ORDER BY price DESC;
 
--- Q18. Find the top-selling pizza in each category 
-WITH pizza_sales AS
-(
-    SELECT
-        pt.category,
-        pt.name,
-        SUM(od.quantity) AS total_quantity,
-        ROW_NUMBER() OVER
-        (
-            PARTITION BY pt.category
-            ORDER BY SUM(od.quantity) DESC
-        ) AS rn
-    FROM order_details od
-    JOIN pizzas p
-        ON od.pizza_id = p.pizza_id
-    JOIN pizza_types pt
-        ON p.pizza_type_id = pt.pizza_type_id
-    GROUP BY pt.category, pt.name
-)
-
-SELECT category,
-       name,
-       total_quantity
-FROM pizza_sales
-WHERE rn = 1;
-
--- Q19. Compare each day's revenue with the previous day's revenue 
-WITH daily_revenue AS
-(
-    SELECT
-        o.order_date,
-        ROUND(SUM(od.quantity * p.price),2) AS revenue
-    FROM orders o
-    JOIN order_details od
-        ON o.order_id = od.order_id
-    JOIN pizzas p
-        ON od.pizza_id = p.pizza_id
-    GROUP BY o.order_date
-)
-
-SELECT
-    order_date,
-    revenue,
-    LAG(revenue) OVER(ORDER BY order_date) AS previous_day_revenue
-FROM daily_revenue;
-
--- Q20. Create a Sales Analysis View
-CREATE VIEW vw_pizza_sales AS
-SELECT
-    o.order_date,
-    o.order_time,
-    pt.name AS pizza_name,
-    pt.category,
-    p.size,
-    od.quantity,
-    p.price,
-    (od.quantity * p.price) AS revenue
-FROM orders o
-JOIN order_details od
-    ON o.order_id = od.order_id
+-- Q18. Find the Number of Orders by Pizza Category
+SELECT pt.category,
+       COUNT(DISTINCT od.order_id) AS total_orders
+FROM order_details od
 JOIN pizzas p
     ON od.pizza_id = p.pizza_id
 JOIN pizza_types pt
-    ON p.pizza_type_id = pt.pizza_type_id;
+    ON p.pizza_type_id = pt.pizza_type_id
+GROUP BY pt.category
+ORDER BY total_orders DESC;
 
+-- Q19. Find the Average Pizza Price by Category
+SELECT pt.category,
+       ROUND(AVG(p.price), 2) AS avg_pizza_price
+FROM pizzas p
+JOIN pizza_types pt
+    ON p.pizza_type_id = pt.pizza_type_id
+GROUP BY pt.category
+ORDER BY avg_pizza_price DESC;
+
+-- Q20. Find the top-selling pizza in each category
+SELECT category, name, total_quantity
+FROM (
+	  SELECT pt.category, pt.name,
+             SUM(od.quantity) AS total_quantity,
+             ROW_NUMBER() OVER(PARTITION BY pt.category 
+			 ORDER BY SUM(od.quantity) DESC) AS rn
+      FROM order_details od
+      JOIN pizzas p
+      ON od.pizza_id=p.pizza_id
+      JOIN pizza_types pt
+      ON p.pizza_type_id=pt.pizza_type_id
+      GROUP BY pt.category, pt.name
+ ) AS pizza_sales
+ WHERE rn=1;
 
