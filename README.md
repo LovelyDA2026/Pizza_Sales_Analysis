@@ -98,11 +98,9 @@ SQL Techniques Used
 - "ORDER BY"
 - "JOIN"
 - Subquery
-- CTE
 - Window Functions
 - "ROW_NUMBER()"
-- "LAG()"
-- SQL View
+
 
 Business Analysis Examples
 
@@ -120,9 +118,9 @@ Business Analysis Examples
 - Revenue by pizza category
 - Revenue by pizza size
 - Pizzas priced above average
+- Number of orders by pizza category
+- Average pizza price by category
 - Top-selling pizza in each category
-- Daily revenue compared with the previous day
-- Creation of a sales analysis view
 
 ---
 
