@@ -8,7 +8,7 @@ The project includes relational database creation, SQL analysis, DAX measures, a
 
 📷 **Dashboard Preview**
 
-![Dashboard](Dashboard.png)
+![Dashboard](dashboard.png)
 
 ---
 
